@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<meta charset="UTF-8" />
+<link rel="stylesheet" href="../../css/bootstrap.min.css">
+<body>
+<div class="container py-4">
+	<form th:action="@{/listar}" th:object="${parametros}" method="post">
+
+		<div class="form-group row">
+			<label class="col-sm-2 col-form-label">Titulo</label>
+			<div class="col-sm-6">
+				<input id="input1" type="text" th:field="*{title}"
+					class="form-control" />
+			</div>
+		</div>
+
+		<div class="form-group row" hidden>
+			<label class="col-sm-2 col-form-label">Pagina</label>
+			<div class="col-sm-6">
+				<input type="text" name="page" th:value="1" class="form-control" />
+
+			</div>
+		</div>
+
+		<div class="form-group row">
+			<div class="col-sm-6">
+				<input type="submit" value="Consultar" class="btn btn-secondary" />
+			</div>
+		</div>
+
+	</form>
+</div>
+</body>
+<script src="../../js/jquery-3.4.1.min.js"></script>
+
+<script src="../../js/bootstrap.min.js"></script>
+
+</html>
